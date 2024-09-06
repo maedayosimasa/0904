@@ -24,9 +24,10 @@
         <tr>
             <th>id</th>
             <th>作者名</th>
-            <th>ひとことメッセージ</th>
+            <th>投稿メッセージ</th>
             <th>投稿日時</th>
             <th>更新日時</th>
+            <th>操作</th>
             <th>操作</th>
         </tr>
 
@@ -45,6 +46,8 @@
             echo "<td>" . htmlspecialchars($row["post_data"]) . "</td>";
             echo "<td>" . htmlspecialchars($row["modified"]) . "</td>";
             echo "<td><a href='update.php?id=" . htmlspecialchars($row["id"]) . "'>編集</a></td>";
+            echo "<td><a href='delete.php?id=" . htmlspecialchars($row["id"]) . "'>削除</a></td>";
+            echo "</tr>";
             echo "</tr>";
         }
 
